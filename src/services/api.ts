@@ -26,7 +26,7 @@ export const api = async <TypeResponse>({
             method,
             params: method == 'GET' && data,
             data: method != 'GET' && data
-        }) // esse parte me explique melhor  mostre ecemplo 
+        }) 
 
         return {
             data: request.data

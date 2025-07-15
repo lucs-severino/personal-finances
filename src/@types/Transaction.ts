@@ -34,14 +34,14 @@ export type ApiGetDashboard = {
     completed_transactions : number,
 }
 
-export type ApiNewtransaction = {
+export type ApiNewTransaction = {
     transactions: Transaction
 }
 
-export type ApiUpdatetransaction = {
+export type ApiUpdateTransaction = {
     transactions: Transaction
 }
 
-export type ApiDeletetransaction = {
+export type ApiDeleteTransaction = {
     success : boolean
 }

@@ -10,7 +10,7 @@ export type ApiSignUp = {
     authToken : string
 }
 
-export type ApiSigmIn = {
+export type ApiSignIn = {
     user : User,
     authToken : string
 }

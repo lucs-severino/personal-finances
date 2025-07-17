@@ -5,13 +5,13 @@ import { api } from "./api"
 
 // Auth
 export const signUp = async (name: string, email: string, password: string) =>{
-    await api <ApiSignUp>({
+    return await api <ApiSignUp>({
         endpoint: 'auth/signup', method: 'POST', data:{ name, email, password}, withAuth: false
     })
 }
 
 export const signIn = async (email: string, password: string) =>{
-    await api <ApiSignIn>({
+    return await api <ApiSignIn>({
         endpoint: 'auth/signIn', method: 'POST', data:{email, password}, withAuth: false
     })
 }

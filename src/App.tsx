@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { userAuth } from "./hooks/auth";
 import { useTheme } from "./hooks/theme";
 import { ThemeProvider } from "styled-components";
-import { lightTheme } from "./themes/ligthTheme";
+import { lightTheme } from "./themes/lightTheme";
 import { darkTheme } from "./themes/darkTheme";
 
 const App = () => {
@@ -20,7 +20,7 @@ const App = () => {
 
     return (
         <ThemeProvider theme ={theme == 'light' ? lightTheme: darkTheme}>
-            ...
+            Meu texto teste
         </ThemeProvider>
     )
 }

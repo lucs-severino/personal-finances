@@ -5,7 +5,7 @@ import { getUser, signIn, signUp } from "../services/request"
 
 const LOCAL_STOREGE_KEY = import.meta.env.VITE_LOCAL_STOREGE_AUTH_KEY
 
-export const userAuth = () => {
+export const useAuth = () => {
     const  dispatch = useAppDispatch()
 
     // Function to authenticate the user

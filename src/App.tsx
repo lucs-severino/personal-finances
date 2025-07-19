@@ -1,12 +1,13 @@
 import { useEffect } from "react";
-import { userAuth } from "./hooks/auth";
+import { useAuth } from "./hooks/auth";
 import { useTheme } from "./hooks/theme";
 import { ThemeProvider } from "styled-components";
 import { lightTheme } from "./themes/lightTheme";
 import { darkTheme } from "./themes/darkTheme";
+import { MainRoutes } from "./routes";
 
 const App = () => {
-    const {handleAutenticateUser} = userAuth()
+    const {handleAutenticateUser} = useAuth()
     const {handleInitTheme, theme} = useTheme()
 
     useEffect(() => {
@@ -20,7 +21,7 @@ const App = () => {
 
     return (
         <ThemeProvider theme ={theme == 'light' ? lightTheme: darkTheme}>
-            Meu texto teste
+            <MainRoutes/>
         </ThemeProvider>
     )
 }

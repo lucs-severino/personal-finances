@@ -12,7 +12,7 @@ export const signUp = async (name: string, email: string, password: string) =>{
 
 export const signIn = async (email: string, password: string) =>{
     return await api <ApiSignIn>({
-        endpoint: 'auth/signIn', method: 'POST', data:{email, password}, withAuth: false
+        endpoint: 'auth/signin', method: 'POST', data:{email, password}, withAuth: false
     })
 }
 

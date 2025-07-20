@@ -17,7 +17,7 @@ export const useTheme = () =>  {
             dispatch(setTheme('dark'))
         }
     }
-    const handleTohhleTheme = () => {
+    const handleToggleTheme = () => {
         if (theme == 'light') {
             dispatch(setTheme('dark'))
             localStorage.setItem(LOCAL_STORAGE_KEY, 'dark')
@@ -30,6 +30,6 @@ export const useTheme = () =>  {
     return {
         theme,
         handleInitTheme,
-        handleTohhleTheme
+        handleToggleTheme
     }
 }

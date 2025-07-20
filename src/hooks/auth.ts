@@ -1,7 +1,7 @@
 import type { User } from "../@types/Auth"
 import { useAppDispatch } from "../redux/hooks"
 import { setAuthStatus, setAuthToken, setUser } from "../redux/slices/authSlice"
-import { getUser, signIn, signUp } from "../services/request"
+import { getUser, signIn, signUp } from "../services/requests"
 
 const LOCAL_STOREGE_KEY = import.meta.env.VITE_LOCAL_STOREGE_AUTH_KEY
 
@@ -65,7 +65,7 @@ export const useAuth = () => {
     }
 
     // Function to signOut
-    const handleSingOUt = () => {
+    const handleSignOut = () => {
         dispatch(setUser(null))
         dispatch(setAuthToken(null))
         dispatch(setAuthStatus('not_autenticated'))
@@ -78,6 +78,6 @@ export const useAuth = () => {
         handleAutenticateUser,
         handleSignIn,
         handleSignUp,
-        handleSingOUt
+        handleSignOut
     }
 }

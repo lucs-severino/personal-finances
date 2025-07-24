@@ -50,19 +50,19 @@ export const getTransaction = async (id: number) => {
 
 export const newTransaction = async (title: string, amount: number, status?: TransactionStatus) => {
     return await api<ApiNewTransaction>({
-        endpoint: 'transaction', method: 'POST', data: {title, amount, status}
+        endpoint: 'transactions', method: 'POST', data: {title, amount, status}
     })
 }
 
 export const updateTransaction = async (id: number, title: string, amount: number, status: TransactionStatus) => {
     return await api<ApiUpdateTransaction>({
-        endpoint: `transaction/${id}`, method: 'PUT', data: {title, amount, status}
+        endpoint: `transactions/${id}`, method: 'PUT', data: {title, amount, status}
     })
 }
 
 export const deleteTransaction = async (id: number) => {
     return await api<ApiDeleteTransaction>({
-        endpoint: `transaction/${id}`, method: 'DELETE'
+        endpoint: `transactions/${id}`, method: 'DELETE'
     })
 }
 

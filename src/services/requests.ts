@@ -44,7 +44,7 @@ export const getTransactions = async (page: number) => {
 
 export const getTransaction = async (id: number) => {
     return await api<ApiGetTransaction>({
-        endpoint: `transaction/${id}`
+        endpoint: `transactions/${id}`
     })
 }
 

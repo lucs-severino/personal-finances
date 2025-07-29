@@ -29,7 +29,7 @@ export const updateUser = async (name: string, email : string) => {
     })
 }
 
-export const DeleteUser = async () => {
+export const deleteUser = async () => {
     return await api<ApiDeleteUser>({
         endpoint: 'users', method: 'DELETE'
     })

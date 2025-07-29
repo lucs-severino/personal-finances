@@ -5,6 +5,7 @@ import { Home } from "../pages/Home"
 import { NewTransaction } from "../pages/Transaction/New"
 import { EditTransaction } from "../pages/Transaction/Edit"
 import { Transactions } from "../pages/Transaction/Transactions"
+import { Account } from "../pages/Account"
 
 export const MainRoutes = () => {
     return (
@@ -25,6 +26,11 @@ export const MainRoutes = () => {
                     element={<Home />}
                 />
 
+                <Route 
+                    path="/account"
+                    element={<Account />}
+                />
+                
                 <Route path="/transacoes">
                     <Route 
                         index
